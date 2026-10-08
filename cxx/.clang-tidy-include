@@ -1,0 +1,5 @@
+# Files meson's `clang-tidy` target lints. Everything else (notably
+# subprojects/ pulled in by wraps) is skipped.
+src/**/*
+include/**/*
+tests/**/*

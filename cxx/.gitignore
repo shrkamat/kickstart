@@ -1,0 +1,6 @@
+build/
+builddir/
+.cache
+# meson wrap downloads (keep the .wrap files)
+subprojects/*
+!subprojects/*.wrap

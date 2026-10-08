@@ -1,0 +1,24 @@
+---
+Checks: >
+  -*,
+  bugprone-*,
+  clang-analyzer-*,
+  cppcoreguidelines-*,
+  misc-*,
+  modernize-*,
+  performance-*,
+  portability-*,
+  readability-*,
+  -modernize-use-trailing-return-type,
+  -readability-identifier-length,
+  -readability-magic-numbers,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -misc-include-cleaner,
+  -misc-non-private-member-variables-in-classes
+
+# Treat every enabled warning as an error so `make lint` fails CI.
+WarningsAsErrors: '*'
+
+# Only report diagnostics from our own headers, never from subprojects/.
+HeaderFilterRegex: '.*/cxx/(src|include|tests)/.*'
+FormatStyle: file
